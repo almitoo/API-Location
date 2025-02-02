@@ -67,7 +67,8 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
+if (process.env.NODE_ENV !== "production") {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
-
+}
