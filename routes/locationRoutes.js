@@ -29,6 +29,15 @@ function booleanPointInPolygon(point, polygon) {
     return intersects % 2 !== 0;
 }
 
+
+
+//test
+router.get("/", (req, res) => {
+    res.send(" API!");
+});
+
+
+
 // POST endpoint to handle coordinates and country code
 router.post('/', async (req, res) => {
     const { lon, lat, countryCode } = req.body;
